@@ -1,6 +1,6 @@
 var fasts = [
   {
-    start: "",
+    start: '',
     finish: '00:00',
     weight: '000 LB',
     feeling: 5,
@@ -25,4 +25,4 @@ var fasts = [
   },
 ]
 
-fasts
+export default fasts
