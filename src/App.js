@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+import FastCard from './components/FastCard'
+
+import fastCardBackgroudColors from './components/fastCardBackgroudColors'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return fastCardBackgroudColors
+    .slice(0, 7) // number of Fast cards show on the landing page
+    .map((variant, idx) => <FastCard variant={variant} idx={idx} />)
+
 }
 
-export default App;
+export default App
