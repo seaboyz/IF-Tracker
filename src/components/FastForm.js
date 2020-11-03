@@ -20,7 +20,7 @@ function FastForm({
       <Form.Group>
         <Form.Label for='start'>start</Form.Label>
         <Form.Control
-          type='text'
+          type='datetime-local'
           name='start'
           id='start'
           value={start}
@@ -30,7 +30,7 @@ function FastForm({
       <Form.Group>
         <Form.Label for='finish'>finish:</Form.Label>
         <Form.Control
-          type='text'
+          type='datetime-local'
           name='finish'
           id='finish'
           value={finish}
@@ -40,9 +40,10 @@ function FastForm({
       <Form.Group>
         <Form.Label for='weight'>weight:</Form.Label>
         <Form.Control
-          type='weight'
+          type='number'
           name='weight'
           id='weight'
+          placeholder="123 LB"
           value={weight}
           onChange={handleChange}
         />
@@ -50,9 +51,10 @@ function FastForm({
       <Form.Group>
         <Form.Label for='feeling'>feeling:</Form.Label>
         <Form.Control
-          type='feeling'
+          type='number'
           name='feeling'
           id='feeling'
+          placeholder="1-10"
           value={feeling}
           onChange={handleChange}
         />
@@ -60,9 +62,10 @@ function FastForm({
       <Form.Group>
         <Form.Label for='comment'>comment:</Form.Label>
         <Form.Control
-          type='comment'
+          type='text'
           name='comment'
           id='comment'
+          placeholder="How do you feel?"
           value={comment}
           onChange={handleChange}
         />

@@ -19,7 +19,7 @@ function FastCard({ id, date,start, finish, weight, feeling, comment }) {
       <Card.Body>
         <Card.Title>Intermittent</Card.Title>
         <Card.Title>
-          From {start}To {finish}
+          From {start} To {finish}
         </Card.Title>
         <Card.Title>{weight} LB</Card.Title>
         <Card.Title>Feeling {feeling}</Card.Title>
