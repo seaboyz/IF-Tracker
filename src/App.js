@@ -42,12 +42,14 @@ class App extends Component {
   handleSubmit(event) {
     event.preventDefault()
     const fasts = [
-      ...this.state.fasts,
+      // add newFast on top of fasts
+      // so in this way the fastsHistory always shows the latest fast first.
       {
         id: Date.now(),
         date: new Date().toString(),
         ...this.state.newFast,
       },
+      ...this.state.fasts,
     ]
     // const newFast = {}
     // rest the newFast with properties of empty string instead of empty object 
