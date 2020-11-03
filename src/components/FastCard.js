@@ -1,15 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { Card } from 'react-bootstrap'
 
-function FastCard({ variant, idx }) {
-  const [value, onChange] = useState(new Date())
-
+function FastCard({ id, start, finish, weight, feeling, comment }) {
   return (
     <Card
-      bg={variant.toLowerCase()}
-      key={idx}
-      text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+      bg='primary'
+      key={id}
+      text='white'
       style={{ width: '18rem' }}
       className='mb-2 mx-auto'
     >
@@ -19,10 +17,12 @@ function FastCard({ variant, idx }) {
 
       <Card.Body>
         <Card.Title>Intermittent</Card.Title>
-        <Card.Title>From 00:00 To 00:00 </Card.Title>
-        <Card.Title>XXX LB</Card.Title>
-        <Card.Title>Feeling Meter</Card.Title>
-        <Card.Text>Comments...</Card.Text>
+        <Card.Title>
+          From {start}To {finish}
+        </Card.Title>
+        <Card.Title>{weight} LB</Card.Title>
+        <Card.Title>Feeling {feeling}</Card.Title>
+        <Card.Title>Comments {comment}</Card.Title>
       </Card.Body>
     </Card>
   )
