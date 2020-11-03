@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   handleChange(event) {
-    // using one hanler to update the newFast
+    // using one handler to update the all the inputs
     const newFast = {
       ...this.state.newFast,
       [event.target.name]: event.target.value,

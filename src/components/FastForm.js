@@ -11,7 +11,12 @@ function FastForm({
   comment,
 }) {
   return (
-    <Form onSubmit={handleSubmit} autoComplete='off'>
+    <Form
+      className='px-4 py-3 mx-auto my-5 border border-secondary'
+      style={{ width: '18rem' }}
+      onSubmit={handleSubmit}
+      autoComplete='off'
+    >
       <Form.Group>
         <Form.Label for='start'>start</Form.Label>
         <Form.Control
