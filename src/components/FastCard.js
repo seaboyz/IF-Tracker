@@ -7,14 +7,14 @@ function FastCard({ id, date,start, finish, weight, feeling, comment }) {
   return (
     <Card
       bg='primary'
-      key={id}
+      // key={id}
       text='white'
       style={{ width: '18rem' }}
       className='mb-2 mx-auto'
     >
       <Card.Header>
-      {/* need to be converted to mm:dd:yyyy */}
-        {date}
+      {/* need to be converted to mm-dd-yyyy */}
+        {date.slice(0,10)}
       </Card.Header>
       <Card.Body>
         <Card.Title>Intermittent</Card.Title>

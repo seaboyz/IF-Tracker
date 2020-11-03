@@ -7,7 +7,7 @@ function FastsHistory({ fasts }) {
     <FastCard
       key={fast.id}
       id={fast.id}
-      date={fast.date}
+      date={fast.finish}
       start={fast.start}
       finish={fast.finish}
       weight={fast.weight}
