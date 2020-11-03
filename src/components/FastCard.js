@@ -2,7 +2,8 @@ import React from 'react'
 
 import { Card } from 'react-bootstrap'
 
-function FastCard({ id, start, finish, weight, feeling, comment }) {
+function FastCard({ id, date,start, finish, weight, feeling, comment }) {
+
   return (
     <Card
       bg='primary'
@@ -12,9 +13,9 @@ function FastCard({ id, start, finish, weight, feeling, comment }) {
       className='mb-2 mx-auto'
     >
       <Card.Header>
-        <div>Date</div>
+      {/* need to be converted to mm:dd:yyyy */}
+        {date}
       </Card.Header>
-
       <Card.Body>
         <Card.Title>Intermittent</Card.Title>
         <Card.Title>

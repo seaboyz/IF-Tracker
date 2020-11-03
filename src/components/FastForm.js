@@ -68,11 +68,11 @@ function FastForm({
         />
       </Form.Group>
 
-      <Button variant='primary' type='submit'>
+      <Button className='brn-primary ' type='submit'>
         Submit
       </Button>
       <Button
-        className='btn-success'
+        className='btn-success mx-2'
         type='reset'
         style={{ background: 'darkred' }}
       >

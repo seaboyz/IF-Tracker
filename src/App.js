@@ -31,6 +31,7 @@ class App extends Component {
       ...this.state.fasts,
       {
         id: Date.now(),
+        date: new Date().toString(),
         ...this.state.newFast,
       },
     ]
@@ -50,7 +51,7 @@ class App extends Component {
           feeling={this.state.newFast.feeling}
           comment={this.state.newFast.comment}
         />
-        <FastsHistory fasts={this.state.fasts}/>
+        <FastsHistory fasts={this.state.fasts} />
       </div>
     )
   }
