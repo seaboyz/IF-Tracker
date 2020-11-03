@@ -25,6 +25,7 @@ function FastForm({
           id='start'
           value={start}
           onChange={handleChange}
+          required
         />
       </Form.Group>
       <Form.Group>
@@ -35,6 +36,7 @@ function FastForm({
           id='finish'
           value={finish}
           onChange={handleChange}
+          required
         />
       </Form.Group>
       <Form.Group>
@@ -43,7 +45,7 @@ function FastForm({
           type='number'
           name='weight'
           id='weight'
-          placeholder="123 LB"
+          placeholder='123 LB'
           value={weight}
           onChange={handleChange}
         />
@@ -54,9 +56,11 @@ function FastForm({
           type='number'
           name='feeling'
           id='feeling'
-          placeholder="1-10"
+          placeholder='1-10'
           value={feeling}
           onChange={handleChange}
+          min='1'
+          max='10'
         />
       </Form.Group>
       <Form.Group>
@@ -65,7 +69,7 @@ function FastForm({
           type='text'
           name='comment'
           id='comment'
-          placeholder="How do you feel?"
+          placeholder='How do you feel?'
           value={comment}
           onChange={handleChange}
         />
