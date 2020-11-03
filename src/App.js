@@ -10,7 +10,21 @@ class App extends Component {
     super(props)
     this.state = {
       fasts: [],
-      newFast: {},
+      // newFast: {},
+      // initialize the newFast with properties of empty string instead of empty object 
+      // newFast is the empty object,
+      // after the first rendering 
+      // start={this.state.newFast.start} 
+      // start={undefined}
+      // undefined is passed to the FastForm component
+      // the value atrribute become undefined 
+      // Because of that, the input field will become uncontrolled.
+      //  uncontrolled components, where form data is handled by the DOM itself.
+      // In a controlled component, form data is handled by a React component.
+      // the reason refernce to the following link
+      // https://stackoverflow.com/questions/47012169/a-component-is-changing-an-uncontrolled-input-of-type-text-to-be-controlled-erro
+      // https://reactjs.org/docs/uncontrolled-components.html
+      newFast: { start: '', finish: '', weight: '', feeling: '', comment: '' },
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -35,7 +49,17 @@ class App extends Component {
         ...this.state.newFast,
       },
     ]
-    const newFast = {}
+    // const newFast = {}
+    // rest the newFast with properties of empty string instead of empty object 
+      // the reason refernce to the following link
+      // https://stackoverflow.com/questions/47012169/a-component-is-changing-an-uncontrolled-input-of-type-text-to-be-controlled-erro
+    const newFast = {
+      start: '',
+      finish: '',
+      weight: '',
+      feeling: '',
+      comment: '',
+    }
     this.setState({ fasts, newFast })
   }
 
