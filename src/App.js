@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import shortid from 'shortid'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -11,13 +12,13 @@ class App extends Component {
     this.state = {
       fasts: [],
       // newFast: {},
-      // initialize the newFast with properties of empty string instead of empty object 
+      // initialize the newFast with properties of empty string instead of empty object
       // newFast is the empty object,
-      // after the first rendering 
-      // start={this.state.newFast.start} 
+      // after the first rendering
+      // start={this.state.newFast.start}
       // start={undefined}
       // undefined is passed to the FastForm component
-      // the value atrribute become undefined 
+      // the value atrribute become undefined
       // Because of that, the input field will become uncontrolled.
       //  uncontrolled components, where form data is handled by the DOM itself.
       // In a controlled component, form data is handled by a React component.
@@ -45,16 +46,16 @@ class App extends Component {
       // add newFast on top of fasts
       // so in this way the fastsHistory always shows the latest fast first.
       {
-        id: Date.now(),
+        id: shortid.generate(),
         date: new Date().toString(),
         ...this.state.newFast,
       },
       ...this.state.fasts,
     ]
     // const newFast = {}
-    // rest the newFast with properties of empty string instead of empty object 
-      // the reason refernce to the following link
-      // https://stackoverflow.com/questions/47012169/a-component-is-changing-an-uncontrolled-input-of-type-text-to-be-controlled-erro
+    // rest the newFast with properties of empty string instead of empty object
+    // the reason refernce to the following link
+    // https://stackoverflow.com/questions/47012169/a-component-is-changing-an-uncontrolled-input-of-type-text-to-be-controlled-erro
     const newFast = {
       start: '',
       finish: '',
