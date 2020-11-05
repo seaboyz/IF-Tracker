@@ -78,13 +78,14 @@ function FastForm({
       <Button className='brn-primary ' type='submit'>
         Submit
       </Button>
-      <Button
+      {/* A click on a reset button resets all the form widgets to their default value immediately. From a UX point of view, this is considered bad practice, so you should avoid using this type of button unless you really have a good reason to include one. */}
+      {/* <Button
         className='btn-success mx-2'
         type='reset'
         style={{ background: 'darkred' }}
       >
         Reset
-      </Button>
+      </Button> */}
     </Form>
   )
 }
