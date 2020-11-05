@@ -66,6 +66,7 @@ function FastForm({
       <Form.Group>
         <Form.Label for='comment'>comment:</Form.Label>
         <Form.Control
+          as='textarea'
           type='text'
           name='comment'
           id='comment'
