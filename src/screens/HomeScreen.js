@@ -9,12 +9,14 @@ import FastsHistory from './components/FastsHistory'
 import FastForm from './components/FastForm'
 
 function HomeScreen() {
-  const initialState = {
-    fasts: [],
-    newFast: { start: '', finish: '', weight: '', feeling: '', comment: '' },
-  }
-
-  const [formData, setFormData] = useState(initialState)
+  const [newFast, setNewFast] = useState({
+    start: '',
+    finish: '',
+    weight: '',
+    feeling: '',
+    comment: '',
+  })
+  const [fasts, setFasts] = useState([])
 
   function handleChange(event) {
     // using one handler to update the all the inputs
