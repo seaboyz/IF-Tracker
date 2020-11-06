@@ -35,6 +35,7 @@ class App extends Component {
     // using one handler to update the all the inputs
     const newFast = {
       ...this.state.newFast,
+      // computed property name [..]
       [event.target.name]: event.target.value,
     }
     this.setState({ newFast })
