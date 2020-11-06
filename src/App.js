@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import shortid from 'shortid'
 
+import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import SplitPane from './components/SplitPane'
 import FastsHistory from './components/FastsHistory'
 import FastForm from './components/FastForm'
 
@@ -70,16 +72,20 @@ class App extends Component {
   render() {
     return (
       <div>
-        <FastForm
-          handleChange={this.handleChange}
-          handleSubmit={this.handleSubmit}
-          start={this.state.newFast.start}
-          finish={this.state.newFast.finish}
-          weight={this.state.newFast.weight}
-          feeling={this.state.newFast.feeling}
-          comment={this.state.newFast.comment}
+        <SplitPane
+          left={<FastsHistory fasts={this.state.fasts} />}
+          right={
+            <FastForm
+              handleChange={this.handleChange}
+              handleSubmit={this.handleSubmit}
+              start={this.state.newFast.start}
+              finish={this.state.newFast.finish}
+              weight={this.state.newFast.weight}
+              feeling={this.state.newFast.feeling}
+              comment={this.state.newFast.comment}
+            />
+          }
         />
-        <FastsHistory fasts={this.state.fasts} />
       </div>
     )
   }
