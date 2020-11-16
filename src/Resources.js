@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 
+import { Container } from 'react-bootstrap'
+import ResourceCard from './ResorceCard'
+
 class Resources extends Component {
   constructor(props) {
     super(props)
@@ -27,7 +30,13 @@ class Resources extends Component {
     } else if (!isLoaded) {
       return <div>Loading...</div>
     } else {
-      return <h1>Articles</h1>
+      return (
+        <Container className='mt-4'>
+          {articles.map((article) => (
+            <ResourceCard article={article} />
+          ))}
+        </Container>
+      )
     }
   }
 }
