@@ -1,34 +1,61 @@
-import React, { useEffect } from 'react'
-import shortid from 'shortid'
+import React, { useState } from 'react'
 
-import './App.css'
+import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import SplitPane from './components/SplitPane'
-import FastsHistory from './components/FastsHistory'
-import FastForm from './components/FastForm'
+import SplitPane from '../components/SplitPane'
+import FastsHistory from '../components/FastsHistory'
+import FastForm from '../components/FastForm'
 
 function HomeScreen() {
-  const [newFast, setNewFast] = useState({
-    start: '',
-    finish: '',
-    weight: '',
-    feeling: '',
-    comment: '',
-  })
-  const [fasts, setFasts] = useState([])
+    const [newFast, setNewFast] = useState({
+        start: '',
+        finish: '',
+        weight: '',
+        feeling: '',
+        comment: '',
+    })
+    const [fasts, setFasts] = useState([])
 
-  function handleChange(event) {
-    // using one handler to update the all the inputs
-    const newFast = {
-      ...this.state.newFast,
-      // computed property name [..]
-      [event.target.name]: event.target.value,
+    function handleChange(event) {
+        setNewFast({ ...newFast, [event.target.name]: event.target.value })
     }
-    this.setState({ newFast })
 
-    return <div></div>
-  }
+    function handleSubmit(event) {
+        event.preventDefault()
+
+        setFasts([
+            // add newFast on top of fasts
+            // so in this way the fastsHistory always shows the latest fast first.
+            newFast,
+            ...fasts,
+        ])
+        setNewFast({
+            start: '',
+            finish: '',
+            weight: '',
+            feeling: '',
+            comment: '',
+        })
+    }
+    return (
+        <div>
+            <SplitPane
+                left={<FastsHistory fasts={fasts} />}
+                right={
+                    <FastForm
+                        handleChange={handleChange}
+                        handleSubmit={handleSubmit}
+                        start={newFast.start}
+                        finish={newFast.finish}
+                        weight={newFast.weight}
+                        feeling={newFast.feeling}
+                        comment={newFast.comment}
+                    />
+                }
+            />
+        </div>
+    )
 }
 
 export default HomeScreen
