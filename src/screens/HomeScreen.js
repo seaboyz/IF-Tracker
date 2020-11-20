@@ -8,35 +8,25 @@ import FastsHistory from '../components/FastsHistory'
 import FastForm from '../components/FastForm'
 
 function HomeScreen() {
-    const [newFast, setNewFast] = useState({
+    const formInitialState = {
         start: '',
         finish: '',
         weight: '',
         feeling: '',
         comment: '',
-    })
+    }
+    const [formState, setForm] = useState(formInitialState)
     const [fasts, setFasts] = useState([])
 
     function handleChange(event) {
-        setNewFast({ ...newFast, [event.target.name]: event.target.value })
+        setForm({ ...formState, [event.target.name]: event.target.value })
     }
 
     function handleSubmit(event) {
         event.preventDefault()
 
-        setFasts([
-            // add newFast on top of fasts
-            // so in this way the fastsHistory always shows the latest fast first.
-            newFast,
-            ...fasts,
-        ])
-        setNewFast({
-            start: '',
-            finish: '',
-            weight: '',
-            feeling: '',
-            comment: '',
-        })
+        setFasts([formState, ...fasts])
+        setForm(formInitialState)
     }
     return (
         <div>
@@ -46,11 +36,11 @@ function HomeScreen() {
                     <FastForm
                         handleChange={handleChange}
                         handleSubmit={handleSubmit}
-                        start={newFast.start}
-                        finish={newFast.finish}
-                        weight={newFast.weight}
-                        feeling={newFast.feeling}
-                        comment={newFast.comment}
+                        start={formState.start}
+                        finish={formState.finish}
+                        weight={formState.weight}
+                        feeling={formState.feeling}
+                        comment={formState.comment}
                     />
                 }
             />
