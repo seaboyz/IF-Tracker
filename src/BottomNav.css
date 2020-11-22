@@ -1,0 +1,23 @@
+.breadcrumb {
+    background-color: #343a40;
+    margin-bottom: 0;
+    padding: 20px 0;
+    font-size: 1.3rem;
+    
+}
+
+
+.bottomNav a{
+    color: #f8f9fa;
+    margin-left: 20px;    
+}
+
+.bottomNav a:hover {
+    text-decoration: none;
+    color: #d5d5d5
+}
+
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: " ";
+}
