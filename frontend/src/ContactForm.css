@@ -1,0 +1,14 @@
+body {
+    background-color: #282c34;
+    color: #f8f9fa;
+
+}
+
+.contactForm {
+    height: 50vh;
+    margin-top: 15%;
+}
+
+.button {
+    width: 100%;
+}
