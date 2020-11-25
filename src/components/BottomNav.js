@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Breadcrumb } from "react-bootstrap";
-import "../BottomNav.css";
+import "../index.css";
 
 function BottomNav() {
   return (

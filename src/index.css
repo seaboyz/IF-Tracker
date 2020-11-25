@@ -1,16 +1,157 @@
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+
+
+/* body {
+  font-family: "heebo", Helvetica;
+  color: rgb(48, 54, 54);
+} */
+
+/* Home Page CSS */
+.landing {
+  min-height: 100vh;
+  /* background-image: url('https://images.unsplash.com/photo-1441323263989-281bc2f5b68c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1653&q=80'); */
+  background-image: url("https://images.unsplash.com/photo-1539800644988-3424dd648c2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  padding: 0rem 5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  padding-right: 5vh;
+}
+
+#nav-logo {
+  font-size: 2.2rem;
+  font-family: "lobster", Arial, Helvetica, sans-serif;
+  color: rgb(192, 192, 192);
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: rgb(37, 56, 56);
+  font-family: "heebo", Helvetica;
+}
+
+.nav-links a:hover {
+  color: rgb(82, 114, 114);
+}
+
+.landing button {
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid rgb(48, 54, 54);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.landing button:hover {
+  color: rgb(201, 201, 201);
+  background: rgb(59, 58, 58);
+  transition-duration: 250ms;
+}
+
+main {
+  position: absolute;
+  top: 30%;
+  left: 75%;
+  transform: translate(-75%, -30%);
+  text-align: center;
+}
+
+.main-logo {
+  font-size: 4rem;
+  font-family: "Racing Sans One", cursive;
+  text-transform: uppercase;
+}
+
+.main-text {
+  font-family: "Racing Sans One", cursive;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: lighter;
+}
+
+.bottom-nav-links {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding-right: 7%;
+  min-height: 10vh;
+  font-weight: 300;
+}
+
+
+/* Bottom Nav Links */
+.breadcrumb {
+  background-color: #343a40;
+  margin-bottom: 0;
+  padding: 20px 0;
+  font-size: 1.3rem;
+}
+
+.bottomNav a {
+  color: #f8f9fa;
+  margin-left: 20px;
+}
+
+.bottomNav a:hover {
+  text-decoration: none;
+  color: #d5d5d5;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: " ";
+}
+
+/* Contact Form CSS */
+
+.contactForm {
+  height: 50vh;
+  margin-top: 15%;
+  background-color: #282c34;
+  color: #f8f9fa;
+}
+
+.contactForm .button {
+  width: 100%;
+}

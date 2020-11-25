@@ -1,36 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" 
-rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Lobster&family=Racing+Sans+One&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Lobster&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Lobster&family=Racing+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="../src/home.css">
+    <link rel="stylesheet" href="../src/index.css" />
     <title>IF-Tracker</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="landing">
-        <nav>
-            <h1 id="nav-logo">IF-Tracker</h1>
-            <ul class="nav-links">
-                <!-- <li><a href="/">Home</a></li>
+      <nav>
+        <h1 id="nav-logo">IF-Tracker</h1>
+        <ul class="nav-links">
+          <!-- <li><a href="/">Home</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="/login">Login</a></li> -->
-                <li><button class="login-btn">Login</button></li>
-
-            </ul>
-        </nav>
-        <main>
-            <h2 id="main-logo">intermittent fasting easier</h2>
-            <p class="main-text">Track your eating schedule - See your life change</p>
-            <button class="signup-btn">Sign Up Now</button>
-        </main>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+      <main>
+        <div class="home-text">
+          <h2 class="main-logo">intermittent</h2>
+          <h2 class="main-logo">fasting</h2>
+          <h2 class="main-logo">easier</h2>
+          <p class="main-text">
+            Track your eating schedule - Watch your life change
+          </p>
+          <button class="signup-btn">Sign Up</button>
+        </div>
+      </main>
+      <nav>
+        <div class="bottom-nav">
+          <ul class="bottom-nav-links nav-links">
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/how">How it works</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="slider"></div>
     </div>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+      tl.fromTo(".slider", { opacity: 0 }, { opacity: 1, duration: 0.75 });
+      tl.fromTo(".main-logo", { opacity: 0 }, { opacity: 1, duration: 1.5 });
+      tl.fromTo(".main-text", { opacity: 0 }, { opacity: 1, duration: 1 });
+      tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
+      tl.fromTo(".signup-btn", { opacity: 0 }, { opacity: 1, duration: 0.75 });
+    </script>
+  </body>
 </html>

@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "heebo", Arial, Helvetica, sans-serif;
+    font-family: "heebo", Helvetica;
     color: rgb(48, 54, 54);
 }
 
@@ -13,9 +13,9 @@ body {
     min-height: 100vh;
     /* background-image: url('https://images.unsplash.com/photo-1441323263989-281bc2f5b68c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1653&q=80'); */
     background-image: url('https://images.unsplash.com/photo-1539800644988-3424dd648c2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
-    background-position: center;
     background-repeat: none;
     background-size: cover;
+    background-position: center;
     top: 0;
     padding: 0rem 5rem;
 }
@@ -30,14 +30,15 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
+    
 }
 
 .nav-links li {
-    padding-left: 5vh;
+    padding-right: 5vh;
 }
 
 #nav-logo {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: "lobster", Arial, Helvetica, sans-serif;
     color: rgb(192, 192, 192);
 
@@ -47,8 +48,10 @@ nav {
 .nav-links a {
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: rgb(37, 56, 56);
+    font-family: "heebo", Helvetica;
+
 
 }
 
@@ -83,7 +86,7 @@ main {
     text-align: center;
 }
 
-#main-logo {
+.main-logo {
     font-size: 4rem;
     font-family: 'Racing Sans One', cursive;
     text-transform: uppercase;
@@ -95,4 +98,17 @@ main {
     font-size: 1.1rem;
     font-weight: lighter;
 }
+
+.bottom-nav-links {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-right: 7%;
+    min-height: 10vh;
+    font-weight: 300;
+}
+
 

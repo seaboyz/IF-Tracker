@@ -1,14 +1,12 @@
-body {
-    background-color: #282c34;
-    color: #f8f9fa;
 
-}
 
 .contactForm {
     height: 50vh;
     margin-top: 15%;
+    background-color: #282c34;
+    color: #f8f9fa;
 }
 
-.button {
+.contactForm .button {
     width: 100%;
 }
