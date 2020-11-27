@@ -31,7 +31,7 @@ function HomeScreen() {
         setForm(formInitialState)
     }
     return (
-        <div>
+        <>
             <TopNav />
             <SplitPane
                 left={<FastsHistory fasts={fasts} />}
@@ -48,7 +48,7 @@ function HomeScreen() {
                 }
             />
             <BottomNav />
-        </div>
+        </>
     )
 }
 
