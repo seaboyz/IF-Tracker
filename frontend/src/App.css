@@ -1,16 +1,18 @@
 .SplitPane {
+    margin-top: 5rem;
     width: 100%;
     height: 100%;
 }
 
 .SplitPane-left {
+    margin-top: 5rem;
     float: left;
-    width: 30%;
+    width: 50%;
     height: 100%;
 }
 
 .SplitPane-right {
-    float: left;
-    width: 70%;
+    float: right;
+    width: 50%;
     height: 100%;
 }
