@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import SplitPane from '../components/SplitPane'
 import FastsHistory from '../components/FastsHistory'
 import FastForm from '../components/FastForm'
+import TopNav from '../components/TopNav'
+import BottomNav from '../components/BottomNav'
 
 function HomeScreen() {
     const formInitialState = {
@@ -30,6 +32,7 @@ function HomeScreen() {
     }
     return (
         <div>
+            <TopNav />
             <SplitPane
                 left={<FastsHistory fasts={fasts} />}
                 right={
@@ -44,6 +47,7 @@ function HomeScreen() {
                     />
                 }
             />
+            <BottomNav />
         </div>
     )
 }
